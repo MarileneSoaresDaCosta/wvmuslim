@@ -38,7 +38,7 @@ a {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('resources/mosaic1.jpg');  
+    background-image: url('resources/mosaic2.jpg');  
     min-height: 100%;
     opacity: 1;
 }
@@ -46,14 +46,14 @@ a {
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url('pix/rowing3.png');
+    background-image: url('resources/mosaic3.jpg');
     min-height: 400px;
     opacity: 0.8;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url('pix/sfo.jpg');
+    background-image: url('resources/mosaic4.jpg');
     min-height: 80%;
 }
 
@@ -153,7 +153,7 @@ a {
   }
 
   .bgimg-1 {
-    background-image: url('pix/mainWordsSmall5.png');  
+    background-image: url('resources/mosaic1.jpg');  
       /*opacity: 0.8;*/
   }
 
@@ -175,7 +175,7 @@ a {
     <a class="w3-bar-item w3-button w3-hover-text-light-grey w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <img src="pix/catIconWhite.png" width=30 height=30 style="float:left;"">
+    <img src="resources/arabesqueIcon2.png" width=30 height=30 style="float:left;"">
     <a href="#home" class="w3-bar-item w3-button w3-hide-small">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"> ABOUT</a>
 
@@ -214,9 +214,9 @@ a {
 
 <!-- First Parallax Image with Logo Text  -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <!-- <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity">
-  </div> -->
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-hover-text-white w3-text-black w3-wide ">West Valley Muslim Association</span>
+  </div>
 </div>
 
 <!-- Container (About Section) -->
@@ -297,7 +297,12 @@ a {
 </div> 
 
 
-
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-hover-text-white w3-text-black w3-wide ">WORK</span>
+  </div>
+</div>
 
 
 

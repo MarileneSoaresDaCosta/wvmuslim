@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Mock WVMA</title>
 <meta charset="UTF-8">
 
 
 
-<link rel="icon" href="resources/arabesqueIcon2.png">
+<link rel="icon" href="resources/arabesqueIcon2Black.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,8 +14,10 @@
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,900|Open+Sans:300,300i,400,600,800" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://use.fontawesome.com/516d5e156e.js"></script> 
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700" rel="stylesheet">
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
@@ -36,13 +39,41 @@ a {
     background-size: cover;
 }
 
+/* menu text */
+.menuText {
+  font-size:1.8em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.socialMedia{
+  text-decoration-line: none;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.4em;
+  font-size:1.8em;
+}
+
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('resources/mosaic2.jpg');  
+    background-image: url('resources/mosqueNight.jpg');  
     min-height: 100%;
     opacity: 1;
 }
 
+.mainTitle {
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.mainTitle-display{
+  position:absolute;
+  top:20%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%)
+}
 
 /* Second image (Portfolio) */
 .bgimg-2 {
@@ -61,13 +92,7 @@ a {
 
 .w3-hover-opacity {cursor: pointer;}
 
-#github, #linkedin, #pdf{
-  text-decoration-line: none;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-top: 0.5em;
-  font-size: 20px; 
-}
+
 
 .footer-social-media{
   color: #4286f4;
@@ -147,100 +172,93 @@ a {
 }
 
 /* Turn off parallax scrolling for tablets and phones 1024*/
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 900px) {
+
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
   }
 
   .bgimg-1 {
-    background-image: url('resources/mosaic1.jpg');  
+    background-image: url('resources/mosqueNight.jpg');  
       /*opacity: 0.8;*/
   }
 
-  #github, #linkedin, #pdf{
+  .menuText {
+    font-size:1em;
+}
+
+  .mainTitle{
+    font-size: 2em;
+  }
+
+  .socialMedia{
     text-decoration-line: none;
     padding-left: 0.5em;
     padding-right: 0.5em;
     padding-top: 0.5em;
-    font-size: 20px; 
+    font-size: 1.5em; 
   }
 }
 /
 </style>
+
+</head>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-text-light-grey w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
+    <a class="w3-bar-item w3-button w3-hover-text-light-grey w3-hide-medium w3-hide-large w3-right " href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <!-- minimized menu icon -->
+      <i class="fa fa-bars"></i> 
     </a>
-    <img src="resources/arabesqueIcon2.png" width=30 height=30 style="float:left;"">
-    <a href="#home" class="w3-bar-item w3-button w3-hide-small">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"> ABOUT</a>
+    <img src="resources/arabesqueIcon3.png" width=50 height=50 style="float: left;">
+    <a href="#home" class="w3-bar-item w3-button w3-hide-small menuText">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small menuText"> ABOUT</a>
+    <a href="https://sundayschool.wvmuslim.org/" class="w3-bar-item w3-button w3-hide-small menuText"> SUNDAY SCHOOL</a>
+    <a href="#donate" class="w3-bar-item w3-button w3-hide-small menuText"> DONATE</a>
+ 
+    <a href="#" class="w3-bar-item w3-hide-small socialMedia" >
+      
+      <a class="fab fa-twitter w3-right  w3-button socialMedia" title="twitter" href="#"></a>
 
-    <!-- <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small dropdown-hover "><i class="fa fa-th"></i> PROJECTS</a> -->
-    <div class="dropdown">
-      <a href="#portfolio" class="dropbtn  w3-hide-small"><button class=" dropbtn  w3-hide-small">PROJECTS <i class="fa fa-caret-down"></i>
-      </button></a>
-      <div class="dropdown-content">
-        <a href="SATproject.php">SAT Vocab</a>
-        <a href="Bubblesproject.php">Speculative Bubbles</a>
-        <a href="MediaPlayerproject.php">Media Player</a>
-        <a href="Dirsproject.php">Handling Directories</a>
-        <a href="Spiderproject.php">News Spider</a>
-        <a href="Loginproject.php">Login</a>
-        <a href="Imageproject.php">Image Features (ML)</a>
-        <a href="WhatsNext.php">On the pipeline...</a>
-      </div>
-    </div>
+      <a class="fab fa-facebook-f w3-right  w3-button socialMedia" title="facebook" href="https://www.facebook.com/search/top/?q=west%20valley%20muslim%20association"></a>
 
+      <a class="fab fa-youtube w3-right  w3-button socialMedia" title="youtube" href="https://www.youtube.com/watch?v=5qvp93COVLw"></a>
 
-
-
-    <a href="#" class="w3-bar-item w3-hide-small ">
-      <a class="fa fa-github w3-right  w3-button" id="github" title="my github page" href="www.github.com/MarileneSoaresDaCosta" ></a>
-      <a class="fa fa-linkedin w3-right w3-button" id="linkedin" title="my linkedIn" href="www.linkedin.com/in/marilenesdacosta/"></a>
-      <a class="fa fa-file-pdf-o w3-right w3-button" id="pdf" title="Resume" href="pdf/msccv.pdf" ></a> </a>
+      <a class="far fa-clock w3-right  w3-button socialMedia" title="Prayer Times" href="#"></a>
+    </a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PROJECTS</a>
+    <a href="https://sundayschool.wvmuslim.org/" class="w3-bar-item w3-button" onclick="toggleFunction()">SUNDAY SCHOOL</a>
+    <a href="#donate" class="w3-bar-item w3-button" onclick="toggleFunction()">DONATE</a>
+
   </div>
 </div>
 
-<!-- First Parallax Image with Logo Text  -->
+<!-- First Parallax Image with Logo Text w3-xxlarge w3-hover-text-white w3-text-light-grey w3-wide  -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-hover-text-white w3-text-black w3-wide ">West Valley Muslim Association</span>
+  <div class="mainTitle-display">
+    <span class="mainTitle ">West Valley Muslim Association</span>
   </div>
 </div>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
+  <h3 class="w3-center">ABOUT WVMA</h3>
   <!-- not sure if I'll ask permission  to post this... I might use some other motto -->
-      <p class="w3-center"> "Only those who will risk going too far can possibly find out how far one can go." - T. S. Eliot</p>
+      <p class="w3-center"> quote here</p>
 
 
   
   <div class="w3-row">
     <div class="text" style="text-align: justify;">
-      <p>I’m a tech enthusiast with interests spanning data science, machine learning, web programming and design, algorithms, project management and business intelligence. </p>
-      <p>Previously, I worked in Investment Banking and taught Economics and Finance. I love learning new skills, creative work, sharing ideas and working in teams. </p>
-
-    <div class="w3-col m6 w3-center w3-padding-large">
+      <p>The West Valley Muslim Association serves offers religious services and community events to the Muslim communities in Saratoga, Sunnyvale, Campbell, and Cupertino. To become a member, please visit our Membership page. </p>
       
-      <img src="pix/pinkPhoto.jpg" class="w3-round w3-image " alt="Photo of Me" width=50% height=50%>
-      <p><b>Marilene Soares da Costa</b></p><br>
-    </div>
-
-    <!-- Hide this text on small devices w3-hide-small w3-padding-large-->
-    
-      <a href="leneAbout.php"> My career (leaflet page will come here!)</a>
     </div>
   </div>
 </div>
@@ -248,14 +266,14 @@ a {
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-hover-text-white w3-text-black w3-wide ">WORK</span>
+    <span class="w3-xxlarge w3-hover-text-white w3-text-black w3-wide ">DONATE</span>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<!-- Container (donate Section) -->
+<div class="w3-content w3-container w3-padding-64" id="donate">
   
-  <p class="w3-center"><em>Here are some of my projects.</em></p><br>
+  <p class="w3-center"><em>donate</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width)  -->
   <div class="w3-row-padding w3-center">

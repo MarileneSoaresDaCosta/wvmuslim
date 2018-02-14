@@ -1,0 +1,10 @@
+WVMuslim site
+
+Carousel
+1. Determine new pictures dimensions and other attributes are clear
+1.1 picture size
+1.2 text content and positioning
+obs: have a few templates ready so new slides can be easily built
+Should be an API - user enters the picture, and text and then chooses from a few templates
+
+

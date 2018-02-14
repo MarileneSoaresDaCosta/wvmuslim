@@ -1,0 +1,281 @@
+/* CSS styling for WVMuslim Association mock site - version with carousel */
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Roboto", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* top bar, with social media icons, and next line with title and menu */
+
+.header {
+	display: grid;
+	/*width: 100vw;*/
+	/*height: 100vw;*/
+	grid-template-columns: 50px 350px 1px 1px  auto;
+	grid-template-rows: [iconsBar] auto [title_menu] auto;
+	padding: 10px 0 10px 0;
+	grid-template-areas: 
+    "  .    .   .   .  icons"
+    "logo title .   . menuLarge ";
+  /*background-color: grey;*/
+  justify-content: stretch;
+  padding: 10px 10px 0 10px;
+  /*border-style: solid;*/
+  grid-row-gap: 10px;
+}
+
+.icons {
+  grid-area: icons;
+  float: right;
+  /*background-color: yellow;*/
+}
+
+.icon{
+  text-decoration-line: none;
+  font-size:1.2em;
+  opacity: 0.8;
+  float: right;
+  padding: 0 10px 0 10px;
+  color: grey;
+}
+
+.icon:hover{
+  opacity: 1;
+  text-decoration: none;
+  /*padding: 10px;*/
+  border: none;
+}
+
+.logo {
+  grid-area: logo;
+  /*background-color: white;*/
+}
+
+#WVMA_logo{
+	width: 40px;
+  height: 40px; 
+}
+
+.title {
+  grid-area: title;
+  font-weight: 700;
+  /*text-shadow: 1px 1px 2px #000000;*/
+  /*background-color: white;*/
+  color: grey;
+}
+
+.title, .menuLarge {
+	padding-top: 5px;
+}
+
+.menuLarge {
+  grid-area: menuLarge;
+  /*background-color: green;*/
+  text-align: right;
+}
+
+
+.title, .icon {
+	font-size: 1.2em;
+	
+}
+
+.menu_item {
+	padding: 5px 10px 5px 10px;
+  display: inline-block;
+  font-size: 0.8em;
+  color: grey;
+}
+
+.menu_item:hover {
+	color: white;
+	background-color: #ccc;
+	/*border-style: solid;
+	border-color: #ccc;*/
+	text-decoration: none;
+}
+
+
+.navShow {
+  display:block!important;
+}
+
+.right{
+  float: right;
+}
+
+.icons {
+  grid-area: icons;
+  float: right;
+  /*background-color: yellow;*/
+}
+
+
+.menuSmall {
+  display: none;
+}
+
+
+/* prayer times - summary */
+
+.prayer_times {
+  /*background-color: #ccc;*/
+  /*background-image: url("resources/blueMountains.jpg");*/
+  background-color: #9b9188;
+  text-align: center;
+  width: 100%;
+  font-size: 1em;
+  color: white;
+  font-weight: 100;
+  -webkit-box-shadow:0px 1px 1px grey;
+  -moz-box-shadow:0px 1px 1px grey;
+  box-shadow:0px 1px 1px grey;
+  
+}
+
+.prayer {
+  text-align: center;
+
+}
+
+.row_title {
+  text-align: right;
+  font-size: 0.6em;
+}
+
+.jtime {
+  text-align: center;
+}
+
+.btime {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* carousel */
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
+  /*border: solid;*/
+}
+
+
+.carousel-item{
+  margin: 0 auto;
+}
+
+.carousel-caption {
+  font-weight: 100;
+  /*color: red;*/
+}
+
+
+
+/* Mobile */
+@media only screen and (max-width: 1000px) { 
+
+  .menuLarge {
+    display: none;
+  }
+
+  .menuSmall {
+    grid-area: menuSmall;
+    display: inline-block;
+  }
+
+
+  .menu_button {
+    background-color: white;
+    color: grey;
+    border: none;
+    display: block;
+    padding: 0 0 0 4px;
+    font-size: 0.8em;
+  }
+
+  .menu_button:hover, .menu_button:focus{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border: none;
+  }
+
+  .dropdown-item{
+    font-size: 0.8em;
+  }
+
+  .icons {
+    padding: 10px 0 0 0;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 35px  auto  140px;
+    grid-template-areas: 
+      "menuSmall icons icons  "
+      "logo  title   title  ";
+    /*background-color: grey;*/
+    justify-content: stretch;
+    padding: 10px 5px 5px 5px;
+    /*border-style: solid;*/
+    grid-row-gap: 5px;
+  }
+
+  
+  .title, .icon {
+    font-size: 0.9em;
+    color: grey;
+    /*padding: 8px 10px 10px 10px;*/
+  }
+
+  #WVMA_logo{
+    width: 20px;
+    height: 20px; 
+  }
+
+
+/* prayer times */
+
+
+/* carousel */
+
+.carouselImg {
+  height: 50%;
+  width: 100%;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

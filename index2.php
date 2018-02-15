@@ -35,13 +35,14 @@
 <header>
 	<div class="header">
 		
-  	<div class="icons">
+  	<!-- <div class="icons">
 
   		<a class="fab fa-twitter icon" title="twitter" href="#"></a>
     	<a class="fab fa-facebook-f icon" title="facebook" href="https://www.facebook.com/search/top/?q=west%20valley%20muslim%20association"></a>
     	<a class="fab fa-youtube icon" title="youtube" href="https://www.youtube.com/watch?v=5qvp93COVLw"></a>
     	<a class="far fa-clock icon" title="Prayer Times" href="#"></a>
-    </div>
+    </div> -->
+    
     <div class="logo"><img id="WVMA_logo" src="resources/arabesqueIcon3.png"></div>
   	<div class="title"><a >WEST VALLEY MUSLIM ASSOCIATION</a></div>
 
@@ -76,6 +77,7 @@
 	
 </header>
 
+<div class= "prayerTimesContainer">
 <div class="prayer_times">
   <table class="prayer_times">
   <tr>
@@ -104,6 +106,7 @@
   </tr>
 
 </table>
+</div>
 </div>
 
 

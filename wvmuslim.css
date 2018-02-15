@@ -25,7 +25,7 @@ a {
 	grid-template-rows: [iconsBar] auto [title_menu] auto;
 	padding: 10px 0 10px 0;
 	grid-template-areas: 
-    "  .    .   .   .  icons"
+    /*"  .    .   .   .  icons"*/
     "logo title .   . menuLarge ";
   /*background-color: grey;*/
   justify-content: stretch;
@@ -46,7 +46,7 @@ a {
   opacity: 0.8;
   float: right;
   padding: 0 10px 0 10px;
-  color: grey;
+  /*color: grey;*/
 }
 
 .icon:hover{
@@ -62,8 +62,13 @@ a {
 }
 
 #WVMA_logo{
-	width: 40px;
-  height: 40px; 
+	width: 30px;
+  height: 30px; 
+}
+
+.search {
+  color: grey;
+  padding-top: 12px;
 }
 
 .title {
@@ -128,19 +133,21 @@ a {
 
 /* prayer times - summary */
 
+.prayerTimesContainer {
+  padding: 1em 6em 1em 6em;
+  /*background-color: grey;*/
+}
+
 .prayer_times {
-  /*background-color: #ccc;*/
   /*background-image: url("resources/blueMountains.jpg");*/
-  background-color: #9b9188;
   text-align: center;
   width: 100%;
   font-size: 1em;
-  color: white;
-  font-weight: 100;
-  -webkit-box-shadow:0px 1px 1px grey;
-  -moz-box-shadow:0px 1px 1px grey;
-  box-shadow:0px 1px 1px grey;
-  
+  color: #d2d5db;
+  font-weight: 400;
+  /*-webkit-box-shadow:0px 1px 1px #182a47;
+  -moz-box-shadow:0px 1px 1px #182a47;
+  box-shadow:1px 2px 1px #182a47;*/
 }
 
 .prayer {
@@ -168,7 +175,7 @@ a {
   height: 100%;
   width: 100%;
   padding-top: 5px;
-  /*border: solid;*/
+  
 }
 
 
@@ -184,7 +191,63 @@ a {
 
 
 /* Mobile */
-@media only screen and (max-width: 1000px) { 
+@media only (min-width: 601px) and (max-width: 970px) {
+  .title, .icon {
+    font-size: 1em;
+  }
+
+
+ .menuLarge {
+    display: none;
+  }
+
+  .menuSmall {
+    grid-area: menuSmall;
+    display: inline-block;
+  }
+
+
+
+  .menu_button {
+    background-color: white;
+    color: grey;
+    border: none;
+    display: block;
+    padding: 10px 10px 0 4px;
+    font-size: 1.2em;
+    float: right;
+  }
+
+  .menu_button:hover, .menu_button:focus{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border: none;
+  }
+
+  .dropdown-item{
+    font-size: 0.8em;
+  }
+
+.header {
+    display: grid;
+    grid-template-columns: 35px  auto  140px;
+    grid-template-areas: 
+      "logo  title   menuSmall  ";
+    /*background-color: grey;*/
+    justify-content: stretch;
+    padding: 10px 5px 5px 5px;
+    /*border-style: solid;*/
+    grid-row-gap: 5px;
+  }
+
+  
+  
+
+
+}
+
+@media only screen and (max-width: 600px) { 
 
   .menuLarge {
     display: none;
@@ -195,14 +258,18 @@ a {
     display: inline-block;
   }
 
+  .title, .icon {
+    font-size: 0.9em;
+  }
 
   .menu_button {
     background-color: white;
     color: grey;
     border: none;
     display: block;
-    padding: 0 0 0 4px;
-    font-size: 0.8em;
+    padding: 10px 10px 0 4px;
+    /*font-size: 0.8em;*/
+    float: right;
   }
 
   .menu_button:hover, .menu_button:focus{
@@ -219,12 +286,12 @@ a {
   .icons {
     padding: 10px 0 0 0;
   }
+
   .header {
     display: grid;
     grid-template-columns: 35px  auto  140px;
     grid-template-areas: 
-      "menuSmall icons icons  "
-      "logo  title   title  ";
+      "logo  title   menuSmall  ";
     /*background-color: grey;*/
     justify-content: stretch;
     padding: 10px 5px 5px 5px;
@@ -233,11 +300,7 @@ a {
   }
 
   
-  .title, .icon {
-    font-size: 0.9em;
-    color: grey;
-    /*padding: 8px 10px 10px 10px;*/
-  }
+  
 
   #WVMA_logo{
     width: 20px;
@@ -247,6 +310,14 @@ a {
 
 /* prayer times */
 
+
+.prayer_times {
+  font-size: 0.8em;
+}
+
+.prayerTimesContainer {
+  padding: 1em 2em 1em 2em;
+}
 
 /* carousel */
 
